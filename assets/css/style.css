@@ -1,0 +1,36 @@
+.acchead{
+    padding: 10px;
+    background-color: grey;
+    color:#fff;
+    margin: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+
+}
+.accpanel p{
+    padding: 10px;
+    margin: 0;
+    border: 2px solid grey;
+    display: none;
+}
+
+h4.acchead.active{
+    background-color: aquamarine;
+}
+
+.acchead.active+p{
+   display: block; 
+}
+.acchead::after{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 35px;
+    transform: translateY(-50%);
+
+}
+.acchead.active::after{
+       content: "-";
+}
